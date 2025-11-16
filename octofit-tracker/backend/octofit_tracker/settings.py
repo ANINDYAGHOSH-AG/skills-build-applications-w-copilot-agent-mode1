@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-!+md7-+b+griooyv9@(0s^2lgdljn08)e9@9%c&^w+)(g@^i37
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -37,7 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'octofit_tracker',
     'rest_framework',
+    'djongo',
     'corsheaders',
 ]
 
@@ -135,6 +137,15 @@ CORS_ALLOW_HEADERS = [
     'origin',
     'user-agent',
     'x-requested-with',
+]
+
+CORS_ALLOW_METHODS = [
+    'DELETE',
+    'GET',
+    'OPTIONS',
+    'PATCH',
+    'POST',
+    'PUT',
 ]
 
 # Default primary key field type
